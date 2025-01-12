@@ -1,38 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abhishek - Lottie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input to URL</title>
     <style>
-        .lottieWrapper{height:150px;padding:20px;}
-        .text-center{text-align:center;}
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            box-sizing: border-box;
+        }
     </style>
 </head>
-
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@2.0.3/dist/lottie-player.min.js"></script>
-    <div class="lottieWrapper">
-        <lottie-player src="./LoadingCircle.json" background="transparent" speed="1" loop
-            autoplay></lottie-player>
-        <div class="text-center">1) Please wait while we redirect you to the payment gateway</div>
-    </div>
-    <div class="lottieWrapper">
-        <lottie-player src="./LottieTravel.json" background="transparent" speed="1" loop
-            autoplay></lottie-player>
-        <div class="text-center">2) Searching for Flights...</div>
-    </div>
-    <div class="lottieWrapper">
-        <lottie-player src="./PaymentSuccess.json" background="transparent" speed="1" loop
-            autoplay></lottie-player>
-        <div class="text-center">3) Almost done! Finalizing your booking</div>
-    </div>
-    <div class="lottieWrapper">
-        <lottie-player src="./bookingunderway.json" background="transparent" speed="1" loop
-            autoplay></lottie-player>
-        <div class="text-center">4) Booking underway, Thank you for your patience </br>Please do not refresh, close or press back button</div>
-    </div>
+    <input type="text" placeholder="Enter path and press Enter" 
+        onkeypress="if (event.key === 'Enter') location.href = '/' + this.value;">
 </body>
-
 </html>
